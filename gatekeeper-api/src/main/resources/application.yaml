@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: gatekeeper
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+
+security:
+  jwt:
+    secret-key: ${JWT_SECRET_KEY}
+    expiration-seconds: ${JWT_EXPIRATION_TIME}
