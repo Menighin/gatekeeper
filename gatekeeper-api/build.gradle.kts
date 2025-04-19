@@ -1,16 +1,16 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-	id("org.springframework.boot") version "3.2.4"
-	id("io.spring.dependency-management") version "1.1.4"
-	kotlin("jvm") version "1.9.23"
-	kotlin("plugin.spring") version "1.9.23"
-	kotlin("plugin.jpa") version "1.9.23"
+	id("org.springframework.boot") version "3.4.4"
+	id("io.spring.dependency-management") version "1.1.7"
+	kotlin("jvm") version "1.9.25"
+	kotlin("plugin.spring") version "1.9.25"
+	kotlin("plugin.jpa") version "1.9.25"
 }
 
 group = "com.menighin"
 version = "0.0.1-SNAPSHOT"
-val springdocVersion = "2.3.0"
+val springdocVersion = "2.8.6"
 
 java {
 	sourceCompatibility = JavaVersion.VERSION_21

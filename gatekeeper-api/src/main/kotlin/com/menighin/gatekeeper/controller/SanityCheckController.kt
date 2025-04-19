@@ -1,5 +1,6 @@
 package com.menighin.gatekeeper.controller
 
+import org.springframework.security.access.prepost.PreAuthorize
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
@@ -10,8 +11,13 @@ class SanityCheckController {
 
     @GetMapping
     fun sanityCheck(): String {
-        throw RuntimeException("EXCEPTION UHUU")
         return "Not crazy yet!"
+    }
+
+    @GetMapping("/protected")
+    @PreAuthorize("hasRole('ADMIN')")
+    fun sanityCheckProtected(): String {
+        return "Not crazy yet! (protected)"
     }
 
 }

@@ -8,3 +8,7 @@ security:
   jwt:
     secret-key: ${JWT_SECRET_KEY}
     expiration-seconds: ${JWT_EXPIRATION_TIME}
+
+springdoc:
+  swagger-ui:
+    path: /
